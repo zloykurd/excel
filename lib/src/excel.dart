@@ -276,7 +276,7 @@ class Excel {
 
       ///
       /// Remove from the `_archive` also
-      _archive.files.removeWhere((file) {
+      _archive.files.toList().removeWhere((file) {
         return file.name.toLowerCase() == _xmlSheetId[sheet]?.toLowerCase();
       });
 
